@@ -336,9 +336,9 @@ $title = "Job List";
                                 $result = $stmt->fetchAll();
                                 foreach($result as $row)
                                 {
-								$post_date = date_format(date_create_from_format('d/m/Y', $row['closing_date']), 'd');
-                                $post_month = date_format(date_create_from_format('d/m/Y', $row['closing_date']), 'F');
-                                $post_year = date_format(date_create_from_format('d/m/Y', $row['closing_date']), 'Y');
+								$post_date = date_format(date_create_from_format('d/m/YYYY', $row['closing_date']), 'd');
+                                $post_month = date_format(date_create_from_format('d/m/YYYY', $row['closing_date']), 'F');
+                                $post_year = date_format(date_create_from_format('d/m/YYYY', $row['closing_date']), 'Y');
 								$type = $row['type'];
 								$compid = $row['company'];
 								
